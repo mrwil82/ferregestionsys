@@ -1,0 +1,260 @@
+/*fuente google fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500&display=swap");
+
+/* Reset y configuración básica _____________________________________________________________________________________________________*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+/* Estilo personalizado para la barra de navegación ___________________________________________________________________________________*/
+
+.navbar {
+  background-color: #003366;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 1000; /* Asegura que la barra de navegación esté sobre otros elementos */
+}
+
+.navbar-custom .navbar-brand {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.navbar-custom .nav-link {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .navbar-brand:hover {
+  color: #cccccc;
+}
+
+/* Estilo para el menú lateral ________________________________________________________________________________________________________*/
+
+.sidebar {
+  background-color: #003366; /* Nuevo color de fondo para el menú lateral */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 15px;
+  min-height: 100%;
+  margin: 0;
+}
+
+.sidebar .logo-container {
+  text-align: center; /* Centra el logo horizontalmente */
+  margin-bottom: 20px;
+}
+
+.sidebar .logo-container img {
+  display: block;
+  margin: 0 auto; /* Asegura que el logo esté centrado */
+}
+
+.sidebar .nav-link {
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: left; /* Alinea el texto del menú a la izquierda */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #005499; /* Cambio de color de fondo */
+  color: #ffcc00; /* Cambio de color del texto al pasar el ratón */
+  border-left: 8px solid #ffcc00; /* Añadir un borde a la izquierda para resaltar el enlace */
+  padding-left: 10px; /* Ajuste de padding para compensar el borde */
+  transition: all 0.3s ease; /* Transición suave para el cambio */
+}
+
+/* Estilo para el contenido principal ________________________________________________________________________________________________*/
+.container {
+  margin-top: 70px; /* Para evitar que se superponga con la barra de navegación */
+  margin-bottom: 100px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Títulos principales */
+.container h1 {
+  font-family: "montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.container h2 {
+  font-family: "montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: weight;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  text-align: center;
+}
+
+/* Estilo para las tarjetas  ________________________________________________________________________________________________*/
+.card {
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px; /* Ancho máximo para que se vea bien en todas las pantallas */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title {
+  font-family: "montserrat", sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Evita que las palabras largas se salgan del cuadro */
+}
+
+.card-text {
+  font-family: "montserrat", serif; /* Tercera fuente seleccionada */
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Adaptaciones para dispositivos pequeños  ________________________________________________________________________________________________*/
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+  }
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* Estilo para el footer  ___________________________________________________________________________________________________________________*/
+.footer {
+  background-color: #003366;
+  position: fixed;
+  flex-shrink: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+body.scrolled .footer {
+  opacity: 0;
+}
+
+/* Estilo para el modo alto contraste  _______________________________________________________________________________________________________*/
+.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .navbar {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .sidebar {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .sidebar .nav-link {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+}
+
+.high-contrast .sidebar .nav-link:hover {
+  background-color: #333333 !important; /* Fondo más claro en alto contraste */
+  color: #00ff00 !important; /* Cambia el color del texto al pasar el ratón */
+  border-left: 8px solid #00ff00 !important; /* Borde izquierdo para resaltar el enlace */
+}
+
+.high-contrast .container,
+.high-contrast .card,
+.high-contrast .footer {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .card {
+  border-color: #ffffff !important;
+}
+
+/* Estilo para el botón de alto contraste  ______________________________________________________________________________________________________*/
+.contrast-toggle {
+  position: fixed;
+  bottom: 20px; /* Posicionado en la parte inferior */
+  right: 20px; /* Posicionado en la parte derecha */
+  z-index: 1000;
+  background-color: #066d14 !important; /* Color de fondo del botón */
+  color: #ffffff !important; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 25px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espacio interno */
+  font-size: 14px; /* Tamaño de fuente */
+  display: flex; /* Alineación del icono y texto */
+  align-items: center; /* Centrado vertical */
+  gap: 5px; /* Espacio entre icono y texto */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.contrast-toggle:hover {
+  background-color: #003366 !important; /* Cambio de color al pasar el ratón */
+}
+.contrast-toggle {
+  position: fixed;
+  bottom: 20px; /* Posicionado en la parte inferior */
+  right: 20px; /* Posicionado en la parte derecha */
+  z-index: 1000;
+  background-color: #005499 !important; /* Color de fondo del botón */
+  color: #ffffff !important; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 25px !important; /* Bordes redondeados */
+  padding: 10px 20px; /* Espacio interno */
+  font-size: 16px; /* Tamaño de fuente */
+  display: flex; /* Alineación del icono y texto */
+  align-items: center; /* Centrado vertical */
+  gap: 5px; /* Espacio entre icono y texto */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.contrast-toggle:hover {
+  background-color: #003366 !important; /* Cambio de color al pasar el ratón */
+}
